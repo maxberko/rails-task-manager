@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<html class="no-js">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title></title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="">
+    <link href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css" rel="stylesheet">
+  </head>
+  <body>
+    <!--[if lt IE 7]>
+      <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
+    <![endif]-->
+<section class="text-gray-700 body-font">
+  <div class="container px-5 py-24 mx-auto">
+    <h1 class="text-3xl font-medium title-font text-gray-900 mb-12 text-center">Task</h1>
+    <div class="h-100 w-full flex items-center justify-center bg-teal-lightest font-sans">
+        <div class="bg-white rounded shadow p-6 m-4 w-full lg:w-3/4 lg:max-w-lg">
+            <div class="mb-4">
+                <h1 class="text-grey-darkest"><%= @task.title %></h1>
+            </div>
+            <div>
+                <div class="flex mb-4 items-center justify-between">
+                    <div id="text" class="flex flex-col">
+                    <p class="w-full text-grey-darkest"><strong><%= @task.details %></strong></p>
+                    </div>
+                    <div id ="tasks" class="flex flex-row text-right">
+                    <% if @task.completed == true %>
+                        <button class="flex-no-shrink p-2 ml-4 mr-2 border-2 rounded hover:text-white text-green border-green hover:bg-green">Done</button>
+                        <% else %>
+                        <button class="flex-no-shrink p-2 ml-4 mr-2 border-2 rounded text-grey border-grey hover:bg-grey">To do</button>
+                    <% end %>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <button class="flex-no-shrink p-2 ml-4 mr-2 mb-6 border-2 rounded hover:text-white text-grey border-grey hover:bg-grey"><%= link_to("Back to list", tasks_path) %></button>
+  </div>
+</section>
+    <script src="" async defer></script>
+  </body>
+</html>

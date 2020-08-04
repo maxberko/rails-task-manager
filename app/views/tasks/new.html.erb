@@ -1,0 +1,13 @@
+<link href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css" rel="stylesheet">
+<div class="w-full flex flex-col justify-center items-center">
+    <h1>Create a new todo item</h1>
+  <div class="shadow-md rounded px-8 pt-6 pb-8 mb-4 flex">
+    <%= form_for(@task) do |f| %>
+        <%= f.label :title %>
+        <%= f.text_field :title %>
+        <%= f.label :details %>
+        <%= f.text_field :details %>
+        <%= f.submit %>
+        <% end %>
+  </div>
+</div>
