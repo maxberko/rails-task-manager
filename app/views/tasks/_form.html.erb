@@ -1,0 +1,19 @@
+<div class="shadow-md rounded px-8 pt-6 pb-8 mb-4 flex flex-col items-center justify-center">
+    <%= form_for(@task) do |f| %>
+    <div class="flex">
+    <%= f.label :title, class: "w-2/4" %>
+    <%= f.text_field :title, class: "shadow-md rounded-md mb-4 pl-4 w-2/4" %>
+    </div>
+    <div class="flex">
+    <%= f.label :details, class: "w-2/4" %>
+    <%= f.text_field :details, class: "shadow-md rounded-md mb-4 pl-4 w-2/4" %>
+    </div>
+    <div class="flex items-center mb-4">
+    <%= f.label :completed, class: "rounded-md w-2/4" %>
+    <%= f.check_box :completed, class: "flex w-2/4 align-middle" %>
+    </div>
+    <div class="flex items-center justify-center">
+    <%= f.submit class: "shadow-md rounded-md p-2" %>
+    </div>
+    <% end %>
+</div>

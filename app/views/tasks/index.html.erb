@@ -38,7 +38,7 @@
                       <button class="flex-no-shrink p-2 ml-4 mr-2 border-2 rounded">Not Done</button>
                   <% end %>
                   <button class="flex-no-shrink p-2 ml-4 mr-2 border-2 rounded"><%= link_to("See task", task_path(task)) %></button>
-                  <button class="flex-no-shrink p-2 ml-2 border-2 rounded">Remove</button>
+                  <button class="flex-no-shrink p-2 ml-2 border-2 rounded"><%= link_to("Remove", task_path(task), method: :delete, data: { confirm: "sure?" }) %></button>
                 </div>
             </div>
             <% end %>
